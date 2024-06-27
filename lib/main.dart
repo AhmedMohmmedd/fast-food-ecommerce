@@ -1,6 +1,6 @@
 import 'package:ecommerc/core/app_styles/app_themes.dart';
 import 'package:ecommerc/features/auth/screens/auth_welcome.dart';
-import 'package:ecommerc/features/auth/screens/login.dart';
+import 'package:ecommerc/features/auth/screens/login/login.dart';
 import 'package:ecommerc/features/onboarding/welcome/welcom.dart';
 import 'package:flutter/material.dart';
 

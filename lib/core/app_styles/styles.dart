@@ -27,10 +27,12 @@ abstract class TextStyles {
   static const TextStyle medium14 = TextStyle(
     fontWeight: FontWeight.w500,
     fontSize: 14,
+    color: Colors.black,
   );
   static const TextStyle semibold14 = TextStyle(
     fontWeight: FontWeight.w600,
     fontSize: 14,
+    color: Colors.black
   );
   static const TextStyle bold14 = TextStyle(
     fontWeight: FontWeight.w700,

@@ -26,6 +26,7 @@ class _CustomPasswordTextFieldState extends State<CustomPasswordTextField> {
       obscureText: isHidden,
       decoration: InputDecoration(
         hintText: widget.hint,
+        hintStyle: TextStyles.regular14,
         border: OutlineInputBorder(
           borderRadius: BorderRadius.circular(30),
         ),
@@ -43,7 +44,7 @@ class _CustomPasswordTextFieldState extends State<CustomPasswordTextField> {
         ),
         label: Padding(
           padding: const EdgeInsets.symmetric(horizontal: 5),
-            child: Text(widget.label,style: TextStyles.medium18,),
+            child: Text(widget.label,style: TextStyles.bold18,),
         ),
         contentPadding:
             const EdgeInsets.symmetric(horizontal: 25, vertical: 15),
