@@ -39,7 +39,7 @@ class OnBoardingCubit extends Cubit<OnBoardingState> {
 //slide
   void toNextPage(int pageIndex) {
     currentPageIndex = pageIndex;
-    if (currentPageIndex == 2) {
+    if (currentPageIndex == 3) {
       emit(OnBoardingComplete());
     } else {
       emit(OnBoardingCangePage());

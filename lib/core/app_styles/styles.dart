@@ -36,6 +36,11 @@ abstract class TextStyles {
     fontWeight: FontWeight.w700,
     fontSize: 14,
   );
+  static const TextStyle regular24Pacifico = TextStyle(
+              fontSize: 24 , 
+              fontFamily: 'Pacifico',
+              fontWeight: FontWeight.w400
+            );
 
   // fs 16
   static const TextStyle regular16 = TextStyle(
