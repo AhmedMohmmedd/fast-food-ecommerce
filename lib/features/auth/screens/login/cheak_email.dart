@@ -68,7 +68,7 @@ class CheakEmmailScreen extends StatelessWidget {
                 CustomElevatedButton(
                   title: 'CONTINUE',
                   onTap: () {
-                    Navigator.push(
+                    Navigator.pushReplacement(
                       context,
                       MaterialPageRoute(
                         builder: (context) {

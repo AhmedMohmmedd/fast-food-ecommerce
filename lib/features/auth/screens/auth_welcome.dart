@@ -49,7 +49,7 @@ class AuthWelcome extends StatelessWidget {
                   CustomElevatedButton(
                     title: 'SIGN UP',
                     onTap: () {
-                      Navigator.pushReplacement(
+                      Navigator.push(
                         context,
                         MaterialPageRoute(
                           builder: (context) {
@@ -66,7 +66,7 @@ class AuthWelcome extends StatelessWidget {
                     color: Colors.white,
                     textColor: Colors.black,
                     onTap: () {
-                      Navigator.pushReplacement(
+                      Navigator.push(
                         context,
                         MaterialPageRoute(
                           builder: (context) {

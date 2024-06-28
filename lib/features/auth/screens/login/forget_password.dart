@@ -3,6 +3,8 @@ import 'package:ecommerc/core/app_styles/styles.dart';
 import 'package:ecommerc/core/widgets/buttons/elevated_button.dart';
 import 'package:ecommerc/core/widgets/text_fields/normal_text_field.dart';
 import 'package:ecommerc/features/auth/screens/login/cheak_email.dart';
+import 'package:ecommerc/features/auth/screens/login/login.dart';
+import 'package:flutter/gestures.dart';
 import 'package:flutter/material.dart';
 
 class ForgetPasswordScreen extends StatelessWidget {
@@ -50,14 +52,22 @@ class ForgetPasswordScreen extends StatelessWidget {
                   Center(
                     child: RichText(
                       textAlign: TextAlign.center,
-                      text: const TextSpan(children: [
-                        TextSpan(
+                      text: TextSpan(children: [
+                        const TextSpan(
                             text: " Remember the password? ",
                             style: TextStyle(color: AppColors.dark)),
                         TextSpan(
-                          text: "Login Now",
-                          style: TextStyles.semibold14,
-                        ),
+                            text: "Login Now",
+                            style: TextStyles.semibold14,
+                            recognizer: TapGestureRecognizer()
+                              ..onTap = () {
+                                Navigator.push(
+                                  context,
+                                  MaterialPageRoute(
+                                      builder: (context) =>
+                                          const LoginScreen()),
+                                );
+                              }),
                       ]),
                     ),
                   ),
@@ -67,10 +77,14 @@ class ForgetPasswordScreen extends StatelessWidget {
                   CustomElevatedButton(
                     title: 'SUBMIT',
                     onTap: () {
-                       Navigator.push(context,
-            MaterialPageRoute(builder: (context) {
-          return const CheakEmmailScreen();
-        },),);
+                      Navigator.pushReplacement(
+                        context,
+                        MaterialPageRoute(
+                          builder: (context) {
+                            return const CheakEmmailScreen();
+                          },
+                        ),
+                      );
                     },
                   ),
                 ],

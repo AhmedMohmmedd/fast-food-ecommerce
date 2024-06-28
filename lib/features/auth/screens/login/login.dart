@@ -39,7 +39,7 @@ class LoginScreen extends StatelessWidget {
                     height: 20,
                   ),
                   CustomPasswordTextField(
-                    hint: 'Contact@gmail.com',
+                    hint: '************',
                     label: 'Password',
                     controller: TextEditingController(),
                   ),

@@ -6,9 +6,11 @@ import 'package:ecommerc/core/widgets/buttons/outlined_button.dart';
 import 'package:ecommerc/core/widgets/dividers/or.dart';
 import 'package:ecommerc/core/widgets/text_fields/normal_text_field.dart';
 import 'package:ecommerc/core/widgets/text_fields/password_text_field.dart';
+import 'package:ecommerc/features/auth/screens/login/login.dart';
 import 'package:ecommerc/features/auth/screens/login/widgets/dont_have_account_section.dart';
 import 'package:ecommerc/features/auth/screens/login/widgets/forget_password.dart';
 import 'package:ecommerc/features/auth/screens/login/widgets/logo_section.dart';
+import 'package:flutter/gestures.dart';
 import 'package:flutter/material.dart';
 
 class SignUpScreen extends StatelessWidget {
@@ -86,16 +88,25 @@ class SignUpScreen extends StatelessWidget {
                   const SizedBox(
                     height: 25,
                   ),
-                 RichText(
-      textAlign: TextAlign.center,
-      text: const TextSpan(children: [
-        TextSpan(
-            text: "if You Allready Have an Account  ",
-            style: TextStyle(color: AppColors.dark)),
-        TextSpan(
-            text: "Login Now", style: TextStyles.semibold14),
-      ]),
-    ),
+                  RichText(
+                    textAlign: TextAlign.center,
+                    text: TextSpan(children: [
+                      const TextSpan(
+                          text: "if You Allready Have an Account  ",
+                          style: TextStyle(color: AppColors.dark)),
+                      TextSpan(
+                          text: "Login Now",
+                          style: TextStyles.semibold14,
+                          recognizer: TapGestureRecognizer()
+                            ..onTap = () {
+                              Navigator.push(
+                                context,
+                                MaterialPageRoute(
+                                    builder: (context) => const LoginScreen()),
+                              );
+                            }),
+                    ]),
+                  ),
                 ],
               ),
             ),

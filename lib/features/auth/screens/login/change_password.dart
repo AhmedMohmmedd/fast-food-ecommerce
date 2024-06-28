@@ -61,7 +61,7 @@ class ChangePasswordScreen extends StatelessWidget {
                 CustomElevatedButton(
                   title: 'RESET PASSWORD',
                   onTap: () {
-                                   Navigator.push(context,
+                                   Navigator.pushReplacement(context,
                         MaterialPageRoute(builder: (context) {
                       return const PasswordUpdatedScreen();
                     },),);
