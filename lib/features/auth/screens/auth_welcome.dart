@@ -2,6 +2,7 @@ import 'package:ecommerc/core/app_styles/app_colors.dart';
 import 'package:ecommerc/core/app_styles/images_strings.dart';
 import 'package:ecommerc/core/app_styles/styles.dart';
 import 'package:ecommerc/core/widgets/buttons/elevated_button.dart';
+import 'package:ecommerc/features/auth/screens/login/login.dart';
 import 'package:flutter/material.dart';
 import 'package:flutter_svg/svg.dart';
 
@@ -16,7 +17,8 @@ class AuthWelcome extends StatelessWidget {
           child: SingleChildScrollView(
             child: Padding(
               padding: const EdgeInsets.symmetric(
-                horizontal: 20,vertical: 10,
+                horizontal: 20,
+                vertical: 10,
               ),
               child: Column(
                 mainAxisAlignment: MainAxisAlignment.center,
@@ -43,7 +45,10 @@ class AuthWelcome extends StatelessWidget {
                   const SizedBox(
                     height: 30,
                   ),
-                  CustomElevatedButton(title: 'SIGN UP', onTap: () {}),
+                  CustomElevatedButton(
+                    title: 'SIGN UP',
+                    onTap: () {},
+                  ),
                   const SizedBox(
                     height: 20,
                   ),
@@ -51,39 +56,48 @@ class AuthWelcome extends StatelessWidget {
                     title: 'LOGIN',
                     color: Colors.white,
                     textColor: Colors.black,
-                    onTap: () {},
+                    onTap: () {
+                      Navigator.pushReplacement(
+                        context,
+                        MaterialPageRoute(
+                          builder: (context) {
+                            return const LoginScreen();
+                          },
+                        ),
+                      );
+                    },
                   ),
                   const SizedBox(
                     height: 40,
                   ),
-            
                   RichText(
                     textAlign: TextAlign.center,
-                text:  TextSpan(
-                  text: 'By ',
-                  style: TextStyles.regular14.copyWith(color: Colors.black),
-                  children: const <TextSpan>[
-                    TextSpan(
-                      text: 'Registerion ',
-                      style: TextStyle(color: AppColors.primaryColor),
+                    text: TextSpan(
+                      text: 'By ',
+                      style: TextStyles.regular14.copyWith(color: Colors.black),
+                      children: const <TextSpan>[
+                        TextSpan(
+                          text: 'Registerion ',
+                          style: TextStyle(color: AppColors.primaryColor),
+                        ),
+                        TextSpan(
+                          text: 'Or ',
+                        ),
+                        TextSpan(
+                          text: 'Login ',
+                          style: TextStyle(color: AppColors.primaryColor),
+                        ),
+                        TextSpan(
+                          text: 'you have to agreed to ',
+                          // style: TextStyle(decoration: TextDecoration.underline),
+                        ),
+                        TextSpan(
+                          text: 'Terms and Conditions',
+                          style: TextStyle(color: AppColors.primaryColor),
+                        ),
+                      ],
                     ),
-                    TextSpan(
-                      text: 'Or ',
-                    ),
-                    TextSpan(
-                      text: 'Login ',
-                      style: TextStyle(color: AppColors.primaryColor),
-                    ),
-                    TextSpan(
-                      text: 'you have to agreed to ',
-                      // style: TextStyle(decoration: TextDecoration.underline),
-                    ),
-                    TextSpan(
-                      text: 'Terms and Conditions',
-                      style: TextStyle(color: AppColors.primaryColor),
-                    ),
-                  ],
-                ),),
+                  ),
                 ],
               ),
             ),

@@ -19,7 +19,7 @@ class MyApp extends StatelessWidget {
       title: 'Fast Food',
       debugShowCheckedModeBanner: false,
       theme: AppThemes.light,
-      home:  ForgetPasswordScreen(),
+      home:  AuthWelcome(),
     );
   }
 }

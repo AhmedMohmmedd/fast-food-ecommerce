@@ -2,6 +2,7 @@ import 'package:ecommerc/core/app_styles/app_colors.dart';
 import 'package:ecommerc/core/app_styles/styles.dart';
 import 'package:ecommerc/core/widgets/buttons/elevated_button.dart';
 import 'package:ecommerc/core/widgets/text_fields/normal_text_field.dart';
+import 'package:ecommerc/features/auth/screens/login/cheak_email.dart';
 import 'package:flutter/material.dart';
 
 class ForgetPasswordScreen extends StatelessWidget {
@@ -14,7 +15,7 @@ class ForgetPasswordScreen extends StatelessWidget {
         child: Center(
           child: SingleChildScrollView(
             child: Padding(
-              padding:const EdgeInsets.symmetric(
+              padding: const EdgeInsets.symmetric(
                 horizontal: 20,
                 vertical: 10,
               ),
@@ -31,7 +32,10 @@ class ForgetPasswordScreen extends StatelessWidget {
                   ),
                   const Text(
                     'Enter Your Registered Email Below',
-                    style: TextStyle(color:  AppColors.dark , fontSize: 12,),
+                    style: TextStyle(
+                      color: AppColors.dark,
+                      fontSize: 12,
+                    ),
                   ),
                   const SizedBox(
                     height: 80,
@@ -50,15 +54,25 @@ class ForgetPasswordScreen extends StatelessWidget {
                         TextSpan(
                             text: " Remember the password? ",
                             style: TextStyle(color: AppColors.dark)),
-                        TextSpan(text: "Login Now", style: TextStyles.semibold14 ,),
+                        TextSpan(
+                          text: "Login Now",
+                          style: TextStyles.semibold14,
+                        ),
                       ]),
                     ),
                   ),
-            
-                     const SizedBox(
+                  const SizedBox(
                     height: 100,
                   ),
-                  CustomElevatedButton(title: 'SUBMIT', onTap: (){}),
+                  CustomElevatedButton(
+                    title: 'SUBMIT',
+                    onTap: () {
+                       Navigator.push(context,
+            MaterialPageRoute(builder: (context) {
+          return const CheakEmmailScreen();
+        },),);
+                    },
+                  ),
                 ],
               ),
             ),
