@@ -3,6 +3,7 @@ import 'package:ecommerc/core/app_styles/images_strings.dart';
 import 'package:ecommerc/core/app_styles/styles.dart';
 import 'package:ecommerc/core/widgets/buttons/elevated_button.dart';
 import 'package:ecommerc/features/auth/screens/login/login.dart';
+import 'package:ecommerc/features/auth/screens/sign_up/sign_up.dart';
 import 'package:flutter/material.dart';
 import 'package:flutter_svg/svg.dart';
 
@@ -47,7 +48,15 @@ class AuthWelcome extends StatelessWidget {
                   ),
                   CustomElevatedButton(
                     title: 'SIGN UP',
-                    onTap: () {},
+                    onTap: () {
+                      Navigator.pushReplacement(
+                        context,
+                        MaterialPageRoute(
+                          builder: (context) {
+                            return const SignUpScreen();
+                          },
+                        ));
+                    },
                   ),
                   const SizedBox(
                     height: 20,
