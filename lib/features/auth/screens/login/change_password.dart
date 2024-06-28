@@ -4,6 +4,7 @@ import 'package:ecommerc/core/widgets/buttons/elevated_button.dart';
 import 'package:ecommerc/core/widgets/text_fields/normal_text_field.dart';
 import 'package:ecommerc/core/widgets/text_fields/password_text_field.dart';
 import 'package:ecommerc/features/auth/screens/login/cheak_email.dart';
+import 'package:ecommerc/features/auth/screens/login/password_updated.dart';
 import 'package:flutter/material.dart';
 import 'package:flutter/widgets.dart';
 
@@ -60,10 +61,10 @@ class ChangePasswordScreen extends StatelessWidget {
                 CustomElevatedButton(
                   title: 'RESET PASSWORD',
                   onTap: () {
-                    //                Navigator.push(context,
-                    //     MaterialPageRoute(builder: (context) {
-                    //   return const CheakEmmailScreen();
-                    // },),);
+                                   Navigator.push(context,
+                        MaterialPageRoute(builder: (context) {
+                      return const PasswordUpdatedScreen();
+                    },),);
                   },
                 ),
               ],
