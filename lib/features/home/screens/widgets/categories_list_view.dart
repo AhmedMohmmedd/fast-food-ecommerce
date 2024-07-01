@@ -1,5 +1,6 @@
 
 import 'package:ecommerc/features/home/screens/widgets/categories_list_view_item.dart';
+import 'package:ecommerc/features/home/screens/widgets/pizza_section.dart';
 import 'package:flutter/material.dart';
 
 class CategorisListView extends StatefulWidget {
@@ -15,7 +16,7 @@ class _CategorisListViewState extends State<CategorisListView> {
   int _selectedIndex = 0;
 
   final List<Widget> _pages = const [
-    Center(child: Text('Page 1 Content')),
+    PizzaSection(),
     Center(child: Text('Page 2 Content')),
     Center(child: Text('Page 3 Content')),
     Center(child: Text('Page 4 Content')),
@@ -47,6 +48,7 @@ class _CategorisListViewState extends State<CategorisListView> {
             );
           }),
         ),
+       const SizedBox(height: 20,),
           Expanded(
             child: _pages[_selectedIndex],
           ),
