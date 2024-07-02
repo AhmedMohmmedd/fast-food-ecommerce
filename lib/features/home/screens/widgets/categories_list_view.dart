@@ -48,10 +48,8 @@ class _CategorisListViewState extends State<CategorisListView> {
             );
           }),
         ),
-       const SizedBox(height: 20,),
-          Expanded(
-            child: _pages[_selectedIndex],
-          ),
+       const SizedBox(height: 10,),
+          _pages[_selectedIndex],
       ],
     );
   }

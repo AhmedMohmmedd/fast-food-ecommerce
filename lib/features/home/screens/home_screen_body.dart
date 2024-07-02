@@ -19,18 +19,20 @@ class HomeScreenBody extends StatelessWidget {
       padding:  EdgeInsets.only(
         top: 10,
       ),
-      child: Column(
-        children: [
-           CustomHomeAppBar(),
-          SizedBox(
-            height: 20,
-          ),
-          CustomSherchRow(),
-          SizedBox(
-            height: 20,
-          ),
-          Expanded(child: CategorisListView())
-        ],
+      child: SingleChildScrollView(
+        child: Column(
+          children: [
+             CustomHomeAppBar(),
+            SizedBox(
+              height: 20,
+            ),
+            CustomSherchRow(),
+            SizedBox(
+              height: 20,
+            ),
+            CategorisListView()
+          ],
+        ),
       ),
     );
   }
