@@ -1,6 +1,6 @@
-
-import 'package:ecommerc/features/home/screens/widgets/custom_rastaurant_item.dart';
-import 'package:ecommerc/features/home/screens/widgets/custom_titel_row.dart';
+import 'package:ecommerc/features/home/screens/home_screen/widgets/custom_rastaurant_item.dart';
+import 'package:ecommerc/features/home/screens/home_screen/widgets/custom_titel_row.dart';
+import 'package:ecommerc/features/home/screens/tranding_rasturants/taranding_rasturants_screen.dart';
 import 'package:flutter/material.dart';
 
 class TrandingRestaurantsSection extends StatelessWidget {
@@ -10,8 +10,13 @@ class TrandingRestaurantsSection extends StatelessWidget {
   Widget build(BuildContext context) {
     return Column(
       children: [
-        const CustomTitelRow(
+        CustomTitelRow(
           text: 'Tranding Restaurants',
+          onTap: () {
+            Navigator.push(context, MaterialPageRoute(builder: (context) {
+              return const TrandingRestaurantsScreen();
+            }));
+          },
         ),
         const SizedBox(
           height: 10,

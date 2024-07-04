@@ -29,20 +29,14 @@ abstract class TextStyles {
     fontSize: 14,
     color: Colors.black,
   );
-  static const TextStyle semibold14 = TextStyle(
-    fontWeight: FontWeight.w600,
-    fontSize: 14,
-    color: Colors.black
-  );
+  static const TextStyle semibold14 =
+      TextStyle(fontWeight: FontWeight.w600, fontSize: 14, color: Colors.black);
   static const TextStyle bold14 = TextStyle(
     fontWeight: FontWeight.w700,
     fontSize: 14,
   );
   static const TextStyle regular24Pacifico = TextStyle(
-              fontSize: 24 , 
-              fontFamily: 'Pacifico',
-              fontWeight: FontWeight.w400
-            );
+      fontSize: 24, fontFamily: 'Pacifico', fontWeight: FontWeight.w400);
 
   // fs 16
   static const TextStyle regular16 = TextStyle(
@@ -163,4 +157,64 @@ abstract class TextStyles {
     fontWeight: FontWeight.w700,
     fontSize: 28,
   );
+
+  //////////////////////////////////
+
+  static TextStyle styleBold24(BuildContext context) {
+    return TextStyle(
+      color: Colors.black,
+      fontSize: getResponsiveFontSize(context, fontSize: 24),
+      fontFamily: 'Poppins',
+      fontWeight: FontWeight.w700,
+    );
+  }
+  static TextStyle styleBold18(BuildContext context) {
+    return TextStyle(
+      color: Colors.black,
+      fontSize: getResponsiveFontSize(context, fontSize: 18),
+      fontFamily: 'Poppins',
+      fontWeight: FontWeight.w700,
+    );
+  }
+
+  static TextStyle stylesimibols14(BuildContext context) {
+    return TextStyle(
+        color: Colors.black,
+        fontSize: getResponsiveFontSize(context, fontSize: 14),
+        fontFamily: 'Poppins',
+        fontWeight: FontWeight.w600);
+  }
+  static TextStyle stylesreguler12(BuildContext context) {
+    return TextStyle(
+        color: Colors.black,
+        fontSize: getResponsiveFontSize(context, fontSize: 12),
+        fontFamily: 'Poppins',
+        fontWeight: FontWeight.w600);
+  }
+}
+
+double getResponsiveFontSize(context, {required double fontSize}) {
+  double scaleFactor = getScaleFactor(context);
+  double responsiveFontSize = fontSize * scaleFactor;
+
+  double lowerLimit = fontSize * .8;
+  double upperLimit = fontSize * 1.2;
+
+  return responsiveFontSize.clamp(lowerLimit, upperLimit);
+}
+
+double getScaleFactor(context) {
+  // var dispatcher = PlatformDispatcher.instance;
+  // var physicalWidth = dispatcher.views.first.physicalSize.width;
+  // var devicePixelRatio = dispatcher.views.first.devicePixelRatio;
+  // double width = physicalWidth / devicePixelRatio;
+
+  double width = MediaQuery.sizeOf(context).width;
+  if (width < 700) {
+    return width / 600;
+  } else if (width < 150) {
+    return width / 900;
+  } else {
+    return width / 1300;
+  }
 }

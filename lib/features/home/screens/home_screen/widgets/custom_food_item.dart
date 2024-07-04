@@ -1,7 +1,8 @@
-
 import 'package:ecommerc/core/app_styles/styles.dart';
-import 'package:ecommerc/features/home/screens/widgets/custom_favorit_container.dart';
+import 'package:ecommerc/features/home/screens/home_screen/widgets/custom_favorit_container.dart';
+import 'package:flutter/cupertino.dart';
 import 'package:flutter/material.dart';
+import 'package:flutter/widgets.dart';
 
 class CustomFoodItem extends StatelessWidget {
   const CustomFoodItem({
@@ -19,8 +20,8 @@ class CustomFoodItem extends StatelessWidget {
         child: Card(
           elevation: 4,
           shape: RoundedRectangleBorder(
-          borderRadius: BorderRadius.circular(16), 
-        ),
+            borderRadius: BorderRadius.circular(16),
+          ),
           child: Container(
             decoration: BoxDecoration(
               borderRadius: BorderRadius.circular(16),
@@ -28,15 +29,18 @@ class CustomFoodItem extends StatelessWidget {
             ),
             child: Stack(
               children: [
-                Container(
-                  height: 140,
-                  decoration: BoxDecoration(
-                    borderRadius: BorderRadius.circular(16),
-                    image: const DecorationImage(
-                      image: AssetImage(
-                        'assets/food/image3.jfif',
+                FractionallySizedBox(
+                  heightFactor: .65,
+                  child: Container(
+                    // height: 140,
+                    decoration: BoxDecoration(
+                      borderRadius: BorderRadius.circular(16),
+                      image: const DecorationImage(
+                        image: AssetImage(
+                          'assets/food/image3.jfif',
+                        ),
+                        fit: BoxFit.cover,
                       ),
-                      fit: BoxFit.cover,
                     ),
                   ),
                 ),
@@ -45,7 +49,7 @@ class CustomFoodItem extends StatelessWidget {
                   right: 20,
                   child: CustomFavoriteContainer(),
                 ),
-                const Positioned(
+                Positioned(
                   bottom: 10,
                   left: 20,
                   child: Column(
@@ -53,9 +57,20 @@ class CustomFoodItem extends StatelessWidget {
                     children: [
                       Row(
                         children: [
-                          Text('Cheez Pizza', style: TextStyles.semibold14),
-                          SizedBox(width: 4,),
-                          Text('1999 Rs', style: TextStyles.bold18),
+                          FittedBox(
+                            fit: BoxFit.scaleDown,
+                            child: Text(
+                              'Cheez Pizza',
+                              style: TextStyles.stylesimibols14(context),
+                            ),
+                          ),
+                          const SizedBox(
+                            width: 4,
+                          ),
+                          Text(
+                            '1999 Rs',
+                            style: TextStyles.styleBold18(context),
+                          ),
                         ],
                       ),
                       Row(
@@ -63,24 +78,28 @@ class CustomFoodItem extends StatelessWidget {
                         children: [
                           Row(
                             children: [
-                              Icon(
+                              const Icon(
                                 Icons.star,
                                 color: Colors.orangeAccent,
                               ),
                               Text(
                                 '4.5',
+                                style: TextStyles.stylesreguler12(context),
                               ),
                             ],
                           ),
-                          SizedBox(width: 5,),
+                          const SizedBox(
+                            width: 5,
+                          ),
                           Row(
                             children: [
-                              Icon(
+                              const Icon(
                                 Icons.location_on_outlined,
                                 color: Colors.red,
                               ),
                               Text(
                                 ' 12 Km Away',
+                                style: TextStyles.stylesreguler12(context),
                               ),
                             ],
                           ),

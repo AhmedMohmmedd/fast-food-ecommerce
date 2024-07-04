@@ -1,7 +1,7 @@
 import 'package:ecommerc/core/app_styles/app_colors.dart';
 import 'package:ecommerc/core/app_styles/styles.dart';
-import 'package:ecommerc/features/home/screens/widgets/custom_favorit_container.dart';
-import 'package:ecommerc/features/home/screens/widgets/custom_rating_container.dart';
+import 'package:ecommerc/features/home/screens/home_screen/widgets/custom_favorit_container.dart';
+import 'package:ecommerc/features/home/screens/home_screen/widgets/custom_rating_container.dart';
 import 'package:flutter/material.dart';
 
 class CustomRastaurantItem extends StatelessWidget {

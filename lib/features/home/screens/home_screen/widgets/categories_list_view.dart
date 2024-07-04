@@ -1,6 +1,6 @@
 
-import 'package:ecommerc/features/home/screens/widgets/categories_list_view_item.dart';
-import 'package:ecommerc/features/home/screens/widgets/pizza_section.dart';
+import 'package:ecommerc/features/home/screens/home_screen/widgets/categories_list_view_item.dart';
+import 'package:ecommerc/features/home/screens/home_screen/widgets/pizza_section.dart';
 import 'package:flutter/material.dart';
 
 class CategorisListView extends StatefulWidget {

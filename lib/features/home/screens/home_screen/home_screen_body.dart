@@ -1,10 +1,10 @@
 import 'package:ecommerc/core/app_styles/app_colors.dart';
 import 'package:ecommerc/core/app_styles/styles.dart';
-import 'package:ecommerc/features/home/screens/widgets/categories_list_view.dart';
-import 'package:ecommerc/features/home/screens/widgets/categories_list_view_item.dart';
-import 'package:ecommerc/features/home/screens/widgets/custom_home_appbar.dart';
-import 'package:ecommerc/features/home/screens/widgets/custom_sherch_row.dart';
-import 'package:ecommerc/features/home/screens/widgets/custom_text_field_wuth_bacground_color.dart';
+import 'package:ecommerc/features/home/screens/home_screen/widgets/categories_list_view.dart';
+import 'package:ecommerc/features/home/screens/home_screen/widgets/categories_list_view_item.dart';
+import 'package:ecommerc/features/home/screens/home_screen/widgets/custom_home_appbar.dart';
+import 'package:ecommerc/features/home/screens/home_screen/widgets/custom_sherch_row.dart';
+import 'package:ecommerc/features/home/screens/home_screen/widgets/custom_text_field_wuth_bacground_color.dart';
 import 'package:flutter/cupertino.dart';
 import 'package:flutter/material.dart';
 import 'package:flutter/widgets.dart';

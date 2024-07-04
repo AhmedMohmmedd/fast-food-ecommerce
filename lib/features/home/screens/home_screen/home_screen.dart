@@ -1,5 +1,6 @@
 import 'package:ecommerc/core/app_styles/app_colors.dart';
-import 'package:ecommerc/features/home/screens/home_screen_body.dart';
+import 'package:ecommerc/features/home/screens/home_screen/home_screen_body.dart';
+import 'package:ecommerc/features/my_cart/screens/my_cart_screen.dart';
 import 'package:flutter/material.dart';
 
 class HomeScreen extends StatefulWidget {
@@ -14,7 +15,7 @@ class _HomeScreenState extends State<HomeScreen> {
   bool isSlected = false;
   final pages = const [
     HomeScreenBody(),
-    Center(child: Text('shop cart')),
+    MyCartScreen(),
     Center(child: Text('location')),
     Center(child: Text('favorits')),
     Center(child: Text('profile')),
@@ -39,7 +40,7 @@ class _HomeScreenState extends State<HomeScreen> {
        selectedItemColor: AppColors.primaryColor,
        unselectedItemColor: AppColors.dark,
        elevation: 0,
-       backgroundColor: Colors.green[100],
+      //  backgroundColor: AppColors.primaryColor,
        
 
         items: const <BottomNavigationBarItem>[
