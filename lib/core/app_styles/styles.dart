@@ -184,6 +184,14 @@ abstract class TextStyles {
       fontWeight: FontWeight.w700,
     );
   }
+  static TextStyle styleBold20(BuildContext context) {
+    return TextStyle(
+      color: Colors.black,
+      fontSize: getResponsiveFontSize(context, fontSize: 20),
+      fontFamily: 'Poppins',
+      fontWeight: FontWeight.w700,
+    );
+  }
 
   static TextStyle stylesimibols14(BuildContext context) {
     return TextStyle(

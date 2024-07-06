@@ -23,7 +23,7 @@ class CustomArrowForwardIcon extends StatelessWidget {
        child: Icon(
          Icons.arrow_forward_ios_outlined,
          color: Colors.white,
-         size: 18,
+         size: 16,
        ),
                 ),
               )),

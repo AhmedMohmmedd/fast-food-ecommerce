@@ -14,8 +14,8 @@ class HomeScreen extends StatefulWidget {
 class _HomeScreenState extends State<HomeScreen> {
   int currentIndex = 0;
   bool isSlected = false;
-  final pages = const [
-    HomeScreenBody(),
+  final pages =  [
+   const HomeScreenBody(),
     MyCartScreen(),
     Center(child: Text('location')),
     FavoriteScreen(),

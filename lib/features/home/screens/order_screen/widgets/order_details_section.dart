@@ -33,7 +33,9 @@ class OrderDetailsSection extends StatelessWidget {
             mainAxisAlignment: MainAxisAlignment.spaceBetween,
             children: [
               SizeOfSection(),
-              NumberOfSection(),
+              NumberOfSection(
+                text: 'Number Of Pizza',
+              ),
             ],
           ),
           const SizedBox(

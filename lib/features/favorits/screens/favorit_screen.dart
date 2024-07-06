@@ -14,7 +14,7 @@ class FavoriteScreen extends StatelessWidget {
       children: [
          CustomAppBar(titel: 'Favorites'),
          SizedBox(height: 20,),
-        CustomFavoriteButtoms(),
+        CustomFavoriteBody(),
        
       ],
     ));

@@ -7,22 +7,21 @@ import 'package:flutter/cupertino.dart';
 import 'package:flutter/material.dart';
 import 'package:flutter/widgets.dart';
 
-class CustomFavoriteButtoms extends StatefulWidget {
-  const CustomFavoriteButtoms({
+class CustomFavoriteBody extends StatefulWidget {
+  const CustomFavoriteBody({
     super.key,
   });
 
   @override
-  State<CustomFavoriteButtoms> createState() => _CustomFavoriteButtomsState();
+  State<CustomFavoriteBody> createState() => _CustomFavoriteBodyState();
 }
 
-class _CustomFavoriteButtomsState extends State<CustomFavoriteButtoms> {
+class _CustomFavoriteBodyState extends State<CustomFavoriteBody> {
   int _selectedIndex = 0;
 
   final List<Widget> _pages = const [
     FavoritsFoodsList(),
     FavoritesRestaurantsListView(),
-    // Center(child: Text('Page 2 Content')),
   ];
 
   void _onItemTapped(int index) {
@@ -39,7 +38,11 @@ class _CustomFavoriteButtomsState extends State<CustomFavoriteButtoms> {
           Container(
             decoration: BoxDecoration(
              color:   Colors.grey[300],
-             borderRadius: BorderRadius.circular(28)
+             borderRadius: BorderRadius.circular(28),
+             border: Border.all(
+              color: Colors.grey,
+              width: .5
+             )
             ),
             height: 56,
             width: 300,
