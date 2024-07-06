@@ -168,6 +168,14 @@ abstract class TextStyles {
       fontWeight: FontWeight.w700,
     );
   }
+  static TextStyle styleBold28(BuildContext context) {
+    return TextStyle(
+      color: Colors.black,
+      fontSize: getResponsiveFontSize(context, fontSize: 28),
+      fontFamily: 'Poppins',
+      fontWeight: FontWeight.w700,
+    );
+  }
   static TextStyle styleBold18(BuildContext context) {
     return TextStyle(
       color: Colors.black,
@@ -184,12 +192,34 @@ abstract class TextStyles {
         fontFamily: 'Poppins',
         fontWeight: FontWeight.w600);
   }
+  static TextStyle stylesimibols16(BuildContext context) {
+    return TextStyle(
+        color: Colors.black,
+        fontSize: getResponsiveFontSize(context, fontSize: 16),
+        fontFamily: 'Poppins',
+        fontWeight: FontWeight.w600);
+  }
+
+  static TextStyle stylesimibols18(BuildContext context) {
+    return TextStyle(
+        color: Colors.black,
+        fontSize: getResponsiveFontSize(context, fontSize: 18),
+        fontFamily: 'Poppins',
+        fontWeight: FontWeight.w600);
+  }
   static TextStyle stylesreguler12(BuildContext context) {
     return TextStyle(
         color: Colors.black,
         fontSize: getResponsiveFontSize(context, fontSize: 12),
         fontFamily: 'Poppins',
-        fontWeight: FontWeight.w600);
+        fontWeight: FontWeight.w400);
+  }
+  static TextStyle stylesreguler16(BuildContext context) {
+    return TextStyle(
+        color: Colors.black,
+        fontSize: getResponsiveFontSize(context, fontSize: 16),
+        fontFamily: 'Poppins',
+        fontWeight: FontWeight.w400);
   }
 }
 
