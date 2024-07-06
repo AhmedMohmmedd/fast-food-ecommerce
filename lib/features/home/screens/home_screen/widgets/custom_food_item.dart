@@ -56,6 +56,9 @@ class CustomFoodItem extends StatelessWidget {
                       ),
                     ),
                   ),
+                  const SizedBox(
+                    height: 4,
+                  ),
                   const Positioned(
                     top: 20,
                     right: 20,

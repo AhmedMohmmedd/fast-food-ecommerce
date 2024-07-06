@@ -6,16 +6,17 @@ import 'package:flutter_svg/svg.dart';
 
 class CategorisListViewItem extends StatelessWidget {
   const CategorisListViewItem({
-    super.key, required this.isSelected,
+    super.key, required this.isSelected, this.borderRadius,
   });
 final bool isSelected;
+final BorderRadiusGeometry? borderRadius;
   @override
   Widget build(BuildContext context) {
     return Container(
       height: 45,
       decoration: BoxDecoration(
         color: isSelected ? AppColors.primaryColor : Colors.grey[300],
-        borderRadius: BorderRadius.circular(28),
+        borderRadius: borderRadius ?? BorderRadius.circular(28),
       ),
       child: Padding(
         padding: const EdgeInsets.symmetric(horizontal: 10),

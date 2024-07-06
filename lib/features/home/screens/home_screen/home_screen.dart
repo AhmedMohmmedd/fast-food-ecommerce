@@ -1,4 +1,5 @@
 import 'package:ecommerc/core/app_styles/app_colors.dart';
+import 'package:ecommerc/features/favorits/screens/favorit_screen.dart';
 import 'package:ecommerc/features/home/screens/home_screen/home_screen_body.dart';
 import 'package:ecommerc/features/my_cart/screens/my_cart_screen.dart';
 import 'package:flutter/material.dart';
@@ -17,7 +18,7 @@ class _HomeScreenState extends State<HomeScreen> {
     HomeScreenBody(),
     MyCartScreen(),
     Center(child: Text('location')),
-    Center(child: Text('favorits')),
+    FavoriteScreen(),
     Center(child: Text('profile')),
   ];
    void _onItemTapped(int index) {
