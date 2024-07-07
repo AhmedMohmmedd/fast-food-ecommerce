@@ -2,6 +2,7 @@ import 'package:ecommerc/core/app_styles/app_colors.dart';
 import 'package:ecommerc/core/app_styles/styles.dart';
 import 'package:ecommerc/core/widgets/appbars/custom_normall_app_bar.dart';
 import 'package:ecommerc/core/widgets/buttons/elevated_button.dart';
+import 'package:ecommerc/features/my_cart/screens/payment/payment_detalis.dart';
 import 'package:ecommerc/features/my_cart/screens/payment/widgets/payment_method_list_view.dart';
 import 'package:flutter/cupertino.dart';
 import 'package:flutter/material.dart';
@@ -30,7 +31,12 @@ class PaymentMethodScreen extends StatelessWidget {
             CustomElevatedButton(
               width: MediaQuery.sizeOf(context).width * .7,
               title: 'PROCEED TO PAYMENT',
-              onTap: () {},
+              onTap: () {
+                 Navigator.push(context,
+            MaterialPageRoute(builder: (context) {
+          return const PaymentDetailsScreen();
+        },),);
+              },
             ),
           ],
         ),
