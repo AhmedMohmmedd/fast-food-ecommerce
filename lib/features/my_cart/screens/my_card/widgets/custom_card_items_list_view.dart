@@ -1,4 +1,4 @@
-import 'package:ecommerc/features/my_cart/screens/widgets/custom_card_item.dart';
+import 'package:ecommerc/features/my_cart/screens/my_card/widgets/custom_card_item.dart';
 import 'package:flutter/cupertino.dart';
 
 class CustomCardItemsListView extends StatelessWidget {

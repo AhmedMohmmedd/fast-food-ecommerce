@@ -1,7 +1,8 @@
 import 'package:ecommerc/core/widgets/appbars/custom_app_bar.dart';
 import 'package:ecommerc/core/widgets/buttons/elevated_button.dart';
-import 'package:ecommerc/features/my_cart/screens/widgets/custom_card_items_list_view.dart';
-import 'package:ecommerc/features/my_cart/screens/widgets/total_price_section.dart';
+import 'package:ecommerc/features/my_cart/screens/my_card/widgets/custom_card_items_list_view.dart';
+import 'package:ecommerc/features/my_cart/screens/my_card/widgets/total_price_section.dart';
+import 'package:ecommerc/features/my_cart/screens/payment/payment_method.dart';
 import 'package:flutter/cupertino.dart';
 import 'package:flutter/material.dart';
 import 'package:flutter/rendering.dart';
@@ -34,7 +35,12 @@ class MyCartScreen extends StatelessWidget {
             CustomElevatedButton(
               title: 'CHECK OUT',
               width: MediaQuery.sizeOf(context).width * .5,
-              onTap: () {},
+              onTap: () {
+                Navigator.push(context,
+            MaterialPageRoute(builder: (context) {
+          return const PaymentMethodScreen();
+        },),);
+              },
             ),
             const SizedBox(
               height: 20,

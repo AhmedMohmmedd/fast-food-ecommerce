@@ -2,7 +2,7 @@
 import 'package:ecommerc/core/app_styles/app_colors.dart';
 import 'package:ecommerc/core/app_styles/styles.dart';
 import 'package:ecommerc/features/home/screens/order_screen/widgets/number_off_section.dart';
-import 'package:ecommerc/features/my_cart/screens/widgets/circuler_checbox.dart';
+import 'package:ecommerc/features/my_cart/screens/my_card/widgets/circuler_checbox.dart';
 import 'package:flutter/material.dart';
 
 class CustomCartItem extends StatefulWidget {

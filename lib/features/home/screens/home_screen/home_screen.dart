@@ -1,7 +1,7 @@
 import 'package:ecommerc/core/app_styles/app_colors.dart';
 import 'package:ecommerc/features/favorits/screens/favorit_screen.dart';
 import 'package:ecommerc/features/home/screens/home_screen/home_screen_body.dart';
-import 'package:ecommerc/features/my_cart/screens/my_cart_screen.dart';
+import 'package:ecommerc/features/my_cart/screens/my_card/my_cart_screen.dart';
 import 'package:flutter/material.dart';
 
 class HomeScreen extends StatefulWidget {
