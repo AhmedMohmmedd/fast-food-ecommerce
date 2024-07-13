@@ -192,6 +192,14 @@ abstract class TextStyles {
       fontWeight: FontWeight.w700,
     );
   }
+  static TextStyle styleMedium13(BuildContext context) {
+    return TextStyle(
+      color: Colors.black,
+      fontSize: getResponsiveFontSize(context, fontSize: 13),
+      fontFamily: 'Poppins',
+      fontWeight: FontWeight.w500,
+    );
+  }
 
   static TextStyle stylesimibols14(BuildContext context) {
     return TextStyle(
@@ -226,6 +234,20 @@ abstract class TextStyles {
     return TextStyle(
         color: Colors.black,
         fontSize: getResponsiveFontSize(context, fontSize: 16),
+        fontFamily: 'Poppins',
+        fontWeight: FontWeight.w400);
+  }
+  static TextStyle stylesreguler18(BuildContext context) {
+    return TextStyle(
+        color: Colors.black,
+        fontSize: getResponsiveFontSize(context, fontSize: 18),
+        fontFamily: 'Poppins',
+        fontWeight: FontWeight.w400);
+  }
+  static TextStyle stylesreguler20(BuildContext context) {
+    return TextStyle(
+        color: Colors.black,
+        fontSize: getResponsiveFontSize(context, fontSize: 20),
         fontFamily: 'Poppins',
         fontWeight: FontWeight.w400);
   }

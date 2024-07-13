@@ -2,6 +2,8 @@ import 'package:ecommerc/core/app_styles/app_colors.dart';
 import 'package:ecommerc/features/favorits/screens/favorit_screen.dart';
 import 'package:ecommerc/features/home/screens/home_screen/home_screen_body.dart';
 import 'package:ecommerc/features/my_cart/screens/my_card/my_cart_screen.dart';
+import 'package:ecommerc/features/profile/screens/drawer/custom_drawer.dart';
+import 'package:ecommerc/features/profile/screens/settings/settings_screen.dart';
 import 'package:flutter/material.dart';
 
 class HomeScreen extends StatefulWidget {
@@ -19,16 +21,19 @@ class _HomeScreenState extends State<HomeScreen> {
     MyCartScreen(),
     Center(child: Text('location')),
     FavoriteScreen(),
-    Center(child: Text('profile')),
+    SettingsScreen(),
   ];
    void _onItemTapped(int index) {
     setState(() {
       currentIndex = index;
     });
   }
+    GlobalKey<ScaffoldState> scaffoldKey  = GlobalKey();
   @override
   Widget build(BuildContext context) {
     return Scaffold(
+      key:scaffoldKey ,
+      drawer: CustomDrawer(),
       body: SafeArea(child: Padding(
         padding: const EdgeInsets.only(left: 14 , right: 14, top: 20),
         child: pages[currentIndex],
